@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://getbootstrap.com/docs/4.0/examples/cover/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+        <title>ARSW - Series</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/bootstrap-select.min.css">
+
+        <!-- Custom styles for this template -->
+        <link href="./css/cover.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+
+    <body class="text-center">
+
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <h3 class="masthead-brand">API Series</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link active" href="">Alphavantage</a>
+                        <a class="nav-link" href="/iextrading.html">Iextrading</a>
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover" id = "content">
+                <h1 class="cover-heading">The stock market from Alphavantage</h1>
+                <p class="lead">The information of the stock exchange provided by Alphavantage.</p>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <select class="selectpicker" id = "selectFunction">
+                            <option value="" disabled selected style="display:none;">Funcion</option>
+                            <option class = "option-select">Intraday</option>
+                            <option class = "option-select">Daily</option>
+                            <option class = "option-select">Weekly</option>
+                            <option class = "option-select">Monthly</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <select class="selectpicker" id = "interval">
+                            <option value="" disabled selected style="display:none;">Interval</option>
+                            <option class = "option-select">1min</option>
+                            <option class = "option-select">5min</option>
+                            <option class = "option-select">15min</option>
+                            <option class = "option-select">30min</option>
+                            <option class = "option-select">60min</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-item" style="width: 110px">
+                        <input type="text" id="company" class="form-control" placeholder="Company">
+                    </div>
+
+                    <div class="grid-item">
+                        <button type="submit" class="btn btn-default" onclick="SeriesController.loadSeries(SeriesController.SerieAlphavantageBuilder, SeriesController.filterSelectedAlphavantage)">Query</button>
+                    </div>
+                </div>
+
+                <table style="width:100%" class = "table" id="HTMLtable">
+
+                </table>
+
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Made by <a>Sergio Rodriguez</a> </p>
+                    <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                </div>
+            </footer>
+        </div>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="js/SeriesController.js"></script>
+        <script type="text/javascript" src="js/SeriesRestController.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    </body></html>
