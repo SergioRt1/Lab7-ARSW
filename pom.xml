@@ -76,10 +76,17 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <!-- JUnit -->
         <dependency>
-            <groupId>com.mycila</groupId>
-            <artifactId>mycila-junit</artifactId>
-            <version>1.4.ga</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <!-- Concurrent JUnit -->
+        <dependency>
+            <groupId>com.vmlens</groupId>
+            <artifactId>concurrent-junit</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
