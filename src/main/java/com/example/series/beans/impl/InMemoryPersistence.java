@@ -5,10 +5,7 @@ import com.example.series.beans.SeriesPersitence;
 import com.example.series.services.SeriesServicesException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
 public class InMemoryPersistence implements SeriesPersitence {
     
     private Map<String, String> cache;
