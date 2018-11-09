@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class HttpConnectionAlphavantage implements HttpConnection{
 
-    private Map<String, String> function;
+    private final Map<String, String> function;
 
     public HttpConnectionAlphavantage() {
         function = new HashMap<>();

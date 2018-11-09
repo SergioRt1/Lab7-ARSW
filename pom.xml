@@ -13,7 +13,7 @@
         <version>2.0.1.RELEASE</version>
         <relativePath/>
     </parent>
-    <name>parcial2-ARSW</name>
+    <name>Lab7-ARSW</name>
 
     <properties>
         <java.version>1.8</java.version>
